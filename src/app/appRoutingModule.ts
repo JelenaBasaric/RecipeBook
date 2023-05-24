@@ -9,8 +9,8 @@ const appRoutes:Routes=[
     {path:'recipes',component: RecipesComponent,children:[
         {path:'',component: StartRecipesComponent},
         {path:'new',component: RecipesEditComponent},
-        {path:'id',component:RecipeDetailComponent},
-        {path:'id/edit',component: RecipesEditComponent}
+        {path:':id',component:RecipeDetailComponent},
+        {path:':id/edit',component: RecipesEditComponent}
     ]}
 ]
 @NgModule({

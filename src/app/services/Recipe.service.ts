@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import {Subject} from "rxjs"
 import { ShoppingService } from "./Shopping.service";
 import { Recipe } from "../dataModel/Recipe.model";
 import { Ingredient } from "../dataModel/Ingredient.model";
@@ -6,7 +7,7 @@ import { Ingredient } from "../dataModel/Ingredient.model";
 @Injectable()
 export class RecipeService{
     constructor(shoppingService:ShoppingService){}
-    
+    recipesChanged=new Subject<Recipe[]>();
     private recipes:Recipe[]=[
         new Recipe('Pancakes','I love sweet','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAGc7u6bLXSCfqpknOsDwh3GBHvBya1fSOKg&usqp=CAU',[
             new Ingredient('nutella',1)]),
