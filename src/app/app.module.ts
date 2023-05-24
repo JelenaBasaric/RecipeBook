@@ -16,6 +16,8 @@ import { AppRoutingModule } from './appRoutingModule';
 import { DropdownDirective } from './dropdown.directives';
 import { StartRecipesComponent } from './recipes/start-recipes/start-recipes.component';
 import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.compon
   imports: [
    
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule
     
   ],

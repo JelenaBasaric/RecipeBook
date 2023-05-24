@@ -21,5 +21,12 @@ export class RecipeService{
     getRecipe(id:number){
         return this.recipes[id];
     }
+    updateRecipe(id:number,newRecipie:Recipe){
+        this.recipes[id]=newRecipie;
+    }
+    addRecepie(newRecepie:Recipe){
+        this.recipes.push(newRecepie);
+        this.recipesChanged.next(this.recipes);
+    }
 
 }

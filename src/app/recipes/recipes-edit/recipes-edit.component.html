@@ -1,1 +1,42 @@
-<p>recipes-edit works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="name" class="form-control">Recipe name</label>
+                <input type="text" id="name"class="form-control" formControlName="name">
+            </div>
+            <div>
+                <label for="descreption">Descreption</label>
+                <input type="textbox"class="form-control" row="4" formControlName="descreption" id="descreption">
+            </div>
+            <div>
+                <label for="imageUrl" class="form-control">Image URL</label>
+                <input type="text" formControlName="imageUrl" id="imageUrl" class="form-control">
+                <img [src]="" alt="" class="img-responsive" style="max-height: 200px;">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-success">Add</button>
+                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+            <hr>
+            <label for="Ingredients" class="form-control">Ingredients:</label>
+        <div class="col-xs-12" formArrayName="ingredients">
+            <div class="row">
+               <div class="col-xs-8">
+                <input type="text" class="form-control" formControlName="ingredientName">
+               </div>
+               <div class="col-xs-2">
+                <input type="text" formControlName="amount" id="amount" class="form-control">
+               </div>
+            <div class="col-xs-2">
+                <button class="btn btn-danger">X</button>
+            </div>
+               <div>
+                <button class="btn button-success">Add Ingredient</button>
+               </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
