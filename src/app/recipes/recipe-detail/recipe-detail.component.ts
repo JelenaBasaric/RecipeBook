@@ -9,6 +9,6 @@ import { Recipe } from 'src/app/dataModel/Recipe.model';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent {
-  recipe:Recipe[]=[];
+  recipe!:Recipe;
 
 }
