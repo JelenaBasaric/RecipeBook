@@ -20,8 +20,8 @@ import { Recipe } from './dataModel/Recipe.model';
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent,
-    Recipe
+    ShoppingEditComponent
+   
   ],
   imports: [
     BrowserModule
