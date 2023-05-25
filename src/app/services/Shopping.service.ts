@@ -17,6 +17,28 @@ this.ingredients[id]=newIngredient;
 this.ingredientsChanged.next(this.ingredients)
 
      }
+     getIngredient(index:number){
+        return this.ingredients[index];
+     }
+     addIngredient(newIngredient:Ingredient){
+        this.ingredients.push(newIngredient);
+        this.ingredientsChanged.next(this.ingredients);
+
+     }
+     deleteIngredient(id:number){
+        
+        
+     }
+     addIngredients(ingredients: Ingredient[]) {
+     
+        this.ingredients.push(...ingredients);
+        this.ingredientsChanged.next(this.ingredients.slice());
+      }
+    
+      updateIngredient(index: number, newIngredient: Ingredient) {
+        this.ingredients[index] = newIngredient;
+        this.ingredientsChanged.next(this.ingredients.slice());
+      }
 
    
 }
