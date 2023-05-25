@@ -1,25 +1,65 @@
-<div class="nav navbar-default">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container-fluid" routerLinkActive="active">
+        <a class="navbar-brand" routerLink="/">Recipe Book</a>
+        <!-- <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button> -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li >
+                    <a routerLink="recipes">Recipes</a>
+                </li>
+                <li >
+                    <a routerLink="shopping-list">Shopping list</a>
+                </li>
+            </ul>
+<div>
+            <ul class="nav navbar-nav navbar-right" >
+                <li class="nav dropdown" >
+                    <a style="cursor: pointer;" class="dropdown-toggle" role="button" >Manage <span class="caret"
+                            ></span></a>
+                    <ul class="dropdown-menu">
+                        <div>
+                        <li><a style="cursor: pointer;">Save Data</a></li>
+                    </div>
+                    <div>
+                        <li><a style="cursor: pointer;">Fetch Data</a></li></div>
+                    </ul>
+                </li>
+            </ul>
+
+
+</div>
+        </div>
+    </div>
+</nav>
+
+<!-- <div class="nav navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
                 <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
             </button>
             <a routerLink="/" class="navbar-brand">Recipe Book</a>
-        </div>
-        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+        </div> 
+ <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li> <a href="#">Recipes</a></li>
                 <li> <a href="#">Shopping list</a></li>
+            </ul> 
+<div> -->
+<!--    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+            <a href="#" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Save data</a></li>
+                <li><a href="#">Fetch data</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown" appDropdown>
-                    <a href="#" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Save data</a></li>
-                        <li><a href="#">Fetch data</a></li>
-                    </ul>
-                </li>
+        </li>
+        </ul>ul
+</div>
+ </li>
             </ul>
         </div>
     </div>
-</div>
+</div> -->
