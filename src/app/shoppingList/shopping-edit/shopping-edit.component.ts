@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -10,7 +10,7 @@ import { ShoppingService } from 'src/app/services/Shopping.service';
   templateUrl: './shopping-edit.component.html',
   styleUrls: ['./shopping-edit.component.css']
 })
-export class ShoppingEditComponent implements OnInit {
+export class ShoppingEditComponent implements OnInit,OnDestroy {
   editMode = false;
   subscription!: Subscription;
   editedItemIndex!: number;
@@ -49,23 +49,26 @@ export class ShoppingEditComponent implements OnInit {
     });
   }
   onSubmit() {
+    
         if (this.editMode) {
           this.spService.updateIngredients(this. editedItemIndex, this.editForm.value)
         }
         else {
           this.spService.addIngredient(this.editForm.value)
         }
+        this,this.editMode=false;
         this.onCancel();
     
       }
-      onCancel() {
-      
+      onCancel() {      
         this.router.navigate(['shopping-list'], { relativeTo: this.route })
-        
       }
       onDelete(){
         this.spService.deleteIngredient(this.editedItemIndex);
         this.onCancel();
+      }
+      ngOnDestroy(): void {
+        this.subscription.unsubscribe();
       }
 
 

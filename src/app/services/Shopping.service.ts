@@ -25,7 +25,10 @@ this.ingredientsChanged.next(this.ingredients)
         this.ingredientsChanged.next(this.ingredients);
 
      }
+   
      deleteIngredient(id:number){
+      this.ingredients.splice(id,1);
+      this.ingredientsChanged.next(this.ingredients)
         
         
      }
