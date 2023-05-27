@@ -20,7 +20,9 @@ import { DropdownDirective } from './dropdown.directives';
 import { StartRecipesComponent } from './recipes/start-recipes/start-recipes.component';
 import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { AuthComponent } from './auth/auth.component'
+import { LoadingSpinnerComponent } from './loadingSpiner';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {FormsModule} from '@angular/forms'
     ShoppingEditComponent,
    DropdownDirective,
     StartRecipesComponent,
-    RecipesEditComponent
+    RecipesEditComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
    
   ],
   imports: [

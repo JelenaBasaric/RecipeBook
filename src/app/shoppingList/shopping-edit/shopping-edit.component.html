@@ -1,25 +1,34 @@
 <div>
     <div class="row">
         <div class="col-xs-12">
-            <form [formGroup]="editForm" (ngSubmit)="onSubmit()" >
+
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-sm-5">
-                        <label for="name" class="form-control">Name ingredient</label>
-                        <input type="text" id="name" formControlName="name" class="form-control">
+                        <div class="form-group">
+                            <label for="name" class="form-control">Name ingredient</label>
+                            <input type="text" id="name" formControlName="name" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
-                        <label for="amount" class="form-control">Amount</label>
-                        <input type="number" id="amount" formControlName="amount" class="form-control">
+                        <div class="form-group">
+                            <label for="amount" class="form-control">Amount</label>
+                            <input type="number" id="amount" formControlName="amount" class="form-control">
+                        </div>
                     </div>
                 </div>
-                <div class="button-group" class="form-control">
-                    <button class="btn btn-success" type="submit" [disabled]="!editForm.valid" (click)="onSubmit()" >{{editMode?'Update':'Add'}}</button>
-                    <button class="btn btn-danger"(click)="onDelete()">Delete</button>
-                    <button class="btn btn-primary"(click)="onCancel()">Cancel</button>
 
+                <div class="form-group">
+                    <div class="button-group" class="form-control">
+                        <button class="btn btn-success" type="submit" [disabled]="!editForm.valid"
+                            (click)="onSubmit()">{{editMode?'Update':'Add'}}</button>
+                        <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+                        <button class="btn btn-primary" (click)="onCancel()">Cancel</button>
+                    </div>
                 </div>
+
             </form>
         </div>
     </div>

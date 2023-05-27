@@ -40,10 +40,10 @@ export class ShoppingEditComponent implements OnInit,OnDestroy {
     if(this.editMode) {
     const ingredient = this.spService.getIngredient(this.editedItemIndex);
     ingredientName = ingredient.name;
-    amount = ingredient.amount
+    amount = ingredient.amount;
        }
     this.editForm = new FormGroup({
-      'name': new FormControl(ingredientName, Validators.required),
+      'name': new FormControl(name, Validators.required),
       'amount': new FormControl(amount,[Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)]),
       
     });
